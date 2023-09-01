@@ -42,9 +42,9 @@
         <!-- MAIN -->
 
         <main>
-          <!-- FINESTRA WHAYSAPP -->
+          <!-- FINESTRA WHATSAPP -->
 
-          <div class="window">
+          <div class="window ">
             <!-- BARRA SUPERIORE WHAYSAPP -->
 
             <div class="top-window d-flex">
@@ -64,13 +64,13 @@
                 </div>
               </div>
 
-              <!-- BARRA SUPERIORE SINISTRA WHAYSAPP -->
+              <!-- BARRA SUPERIORE DESTRA WHAYSAPP -->
 
               <div class="top-right">
                 <div class="top-container">
-                  <div class="user-info">
+                  <div class="d-flex">
                     <img class="user-img" src="./img/avatar_1.jpg" alt="" />
-                    <div class="user-name-access">
+                    <div class="d-flex flex-column">
                       <span> <strong>Michele</strong></span>
                       <span class="last-access"
                         >Ultimo accesso oggi alle 12:00</span
@@ -85,13 +85,117 @@
                 </div>
               </div>
             </div>
-            <!-- PARTE LATO SINISTRO WHAYSAPP -->
 
-            <div class="side-window"></div>
-            <!-- PARTE PRINCIPALE WHAYSAPP -->
 
-            <div class="main-window"></div>
+                <!-- PARTE LATO SINISTRO WHATSAPP -->
+
+          <div class="contenitore d-flex">
+<!-- LEFT SIDE -->
+
+<div class="side-window">
+
+
+  <!-- PARTE LATO SINISTRO WHAYSAPP BELL -->
+
+  <div class="d-flex align-items-center ringbell gap-4">
+    <div>
+      <span>
+        <i class="fa-regular fa-bell-slash fa-xl p-3"></i
+      ></span>
+    </div>
+    <div class="d-flex flex-column flex-start">
+      <div>
+        <span>
+          <strong>Ricevi notifiche di nuovi messaggi</strong></span
+        >
+      </div>
+      <div>
+        <p>
+          <a
+            href="#"
+            class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            >Attiva le notifiche desktop</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- PARTE LATO SINISTRO WHAYSAPP INPUT RICERCA -->
+
+  <div class="input-group my-2">
+    <button
+      class="btn btn-outline-secondary"
+      type="button"
+      id="button-addon1"
+    >
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="cerca o inizia una nuova chat"
+      aria-label="Example text with button addon"
+      aria-describedby="button-addon1"
+    />
+  </div>
+  <!-- PARTE LATO SINISTRO WHAYSAPP  LISTA UTENTI -->
+
+  <div class="d-flex justify-content-between p-2">
+    <!-- 1 UTENTE -->
+
+    <img class="user-img" src="./img/avatar_1.jpg" alt="" />
+    <div class="d-flex flex-column align-items-center">
+      <div class="d-flex flex-column">
+        <span> <strong>Michele</strong></span>
+        <span class=" ">Ultimo messaggio inviato</span>
+      </div>
+    </div>
+    <div>
+      <span>12:00</span>
+    </div>
+  </div>
+  <hr>
+
+                  <!-- 2 UTENTE -->
+
+  <div class="d-flex justify-content-between p-2">
+    <img class="user-img" src="./img/avatar_2.jpg" alt="" />
+    <div class="d-flex flex-column align-items-center">
+      <div class="d-flex flex-column">
+        <span> <strong>Fabio</strong></span>
+        <span class=" ">Ultimo messaggio inviato</span>
+      </div>
+    </div>
+    <div>
+      <span>12:00</span>
+    </div>
+
+
+
+</div>
+<hr>
+
+
+
+
+</div>
+
+<!-- RIGHT MAIN SIDE -->
+<div class="right-main-window">
+
+  <div></div>
+
+</div>
           </div>
+   
+
+        
+           
+       
+
+           
+
+
         </main>
       </div>
     </body>
