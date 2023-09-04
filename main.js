@@ -2,7 +2,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      message: "Hello Vue!",
+      inputMessage: "",
       activeIndex: 0,
 
       contacts: [
@@ -172,9 +172,25 @@ createApp({
   },
   methods: {
     chatText(index) {
-      console.log("click");
-
       this.activeIndex = index;
+    },
+    sendMessage() {
+      console.log("send");
+      const newMessage = {
+        date: "10/01/2020 15:51:00",
+        message: this.inputMessage,
+        status: "received",
+      };
+      this.contacts[this.activeIndex].messages.push(newMessage);
+      this.inputMessage = "";
+      setTimeout(() => {
+        const answer = {
+          date: "10/01/2020 15:51:00",
+          message: "ok",
+          status: "sent",
+        };
+        this.contacts[this.activeIndex].messages.push(answer);
+      }, 1000);
     },
   },
 }).mount("#app");

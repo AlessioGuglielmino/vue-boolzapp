@@ -69,7 +69,7 @@
               </div>
             </div>
             <div>
-              <!-- BARRA DI RICERCA CONTATI -->
+              <!-- BARRA DI RICERCA CONTATTI -->
               <div class="input-group p-3 serch-contacts">
                 <input
                   type="text"
@@ -129,10 +129,10 @@
                 class="text-message"
                 v-for="(messageUser,index) in contacts[activeIndex].messages"
               >
-                <span class="message">
+                <div class="message">
                   {{messageUser.message}}
-                  <sub> {{messageUser.date}}</sub></span
-                >
+                  <sub> {{messageUser.date}}</sub>
+                </div>
               </div>
             </div>
             <!-- SEZIONE INPUT MESSAGGIO -->
@@ -145,6 +145,8 @@
               </div>
               <div class="input-group w-75">
                 <input
+                  v-model="inputMessage"
+                  @keyup.enter="sendMessage()"
                   type="text"
                   class="form-control"
                   placeholder="Scrivi un messaggio"
