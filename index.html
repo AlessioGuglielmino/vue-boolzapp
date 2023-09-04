@@ -35,129 +35,130 @@
       <!-- HEADER -->
 
       <!-- MAIN -->
+      <div class="wrapper">
+        <main class="d-flex">
+          <!-- BARRA SUPERIORE WHAYSAPP -->
+          <div class="header"></div>
+          <!-- BARRA SUPERIORE SINISTRA WHAYSAPP -->
 
-      <main class="d-flex">
-        <!-- BARRA SUPERIORE WHAYSAPP -->
-        <div class="header"></div>
-        <!-- BARRA SUPERIORE SINISTRA WHAYSAPP -->
+          <!-- CONTENITORE CENTRALE -->
+          <div class="contenitore-left">
+            <div class="top-left p-3 user-info">
+              <div class="top-side">
+                <div>
+                  <img class="user-img" src="./img/avatar_io.jpg" alt="" />
+                  <span> <strong>Sofia</strong></span>
+                </div>
+                <div class="d-flex gap-3">
+                  <div><i class="fa-solid fa-circle-notch"></i></div>
+                  <div><i class="fa-regular fa-message"></i></div>
+                  <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+              </div>
+            </div>
 
-        <!-- CONTENITORE CENTRALE -->
-        <div class="contenitore-left">
-          <div class="top-left p-3 user-info">
-            <div class="top-side">
+            <!-- CAMPANA NOTIFICA MESSAGGI  -->
+
+            <div class="bell d-flex align-items-center gap-3 px-3">
+              <div class="bell-icon">
+                <i class="fa-solid fa-bell-slash fa-xl"></i>
+              </div>
+              <div class="">
+                <p>Ricevi notifiche di nuovi messaggi</p>
+                <a href="#">Attiva notifiche desktop </a>
+              </div>
+            </div>
+            <div>
+              <!-- BARRA DI RICERCA CONTATI -->
+              <div class="input-group p-3 serch-contacts">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Cerca o inizia una nuova chat"
+                  aria-label="Recipient's username"
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  id="button-addon2"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- LISTA UTENTI -->
+            <div class="contacts-list px-2">
+              <div
+                @click="chatText(index)"
+                v-for="(contact,index) in contacts"
+                class="d-flex py-3 border-bottom contact"
+              >
+                <img class="user-img" :src="contact.avatar" alt="" />
+                <div class="d-flex flex-column justify-content-between">
+                  <span> <strong>{{contact.name}}</strong></span>
+                  <span class="last-access">Ultimo messaggio inviato</span>
+                </div>
+                <span class="ms-auto">12:00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BARRA SUPERIORE DESTRA WHAYSAPP -->
+          <section>
+            <div class="d-flex justify-content-between user-info px-3">
               <div>
-                <img class="user-img" src="./img/avatar_io.jpg" alt="" />
-                <span> <strong>Sofia</strong></span>
+                <img class="user-img" src="./img/avatar_1.jpg" alt="" />
+                <span><strong>Michele</strong></span>
+                <span>Ultimo accesso oggi alle 12:00</span>
               </div>
-              <div class="d-flex gap-3">
-                <div><i class="fa-solid fa-circle-notch"></i></div>
-                <div><i class="fa-regular fa-message"></i></div>
-                <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+
+              <div class="d-flex align-items-center">
+                <div class="d-flex gap-3">
+                  <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                  <div><i class="fa-solid fa-paperclip"></i></div>
+                  <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
               </div>
             </div>
-          </div>
-
-          <!-- CAMPANA NOTIFICA MESSAGGI  -->
-
-          <div class="bell d-flex align-items-center gap-3 px-3">
-            <div class="bell-icon">
-              <i class="fa-solid fa-bell-slash fa-xl"></i>
-            </div>
-            <div class="">
-              <p>Ricevi notifiche di nuovi messaggi</p>
-              <a href="#">Attiva notifiche desktop </a>
-            </div>
-          </div>
-          <div>
-            <!-- BARRA DI RICERCA CONTATI -->
-            <div class="input-group px-2 my-3">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Cerca o inizia una nuova chat"
-                aria-label="Recipient's username"
-                aria-describedby="button-addon2"
-              />
-              <button
-                class="btn btn-outline-secondary"
-                type="button"
-                id="button-addon2"
+            <!-- SEZIONE CHAT -->
+            <div class="chat p-5">
+              <div
+                :class="messageUser.status== 'received' ? 'received' : 'sent'"
+                class="text-message"
+                v-for="(messageUser,index) in contacts[activeIndex].messages"
               >
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- LISTA UTENTI -->
-          <div class="contacts-list px-2">
-            <div
-              @click="chatText(index)"
-              v-for="(contact,index) in contacts"
-              class="d-flex py-3 border-bottom contact"
-            >
-              <img class="user-img" :src="contact.avatar" alt="" />
-              <div class="d-flex flex-column justify-content-between">
-                <span> <strong>{{contact.name}}</strong></span>
-                <span class="last-access">Ultimo messaggio inviato</span>
-              </div>
-              <span class="ms-auto">12:00</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- BARRA SUPERIORE DESTRA WHAYSAPP -->
-        <section>
-          <div class="d-flex justify-content-between user-info px-3">
-            <div>
-              <img class="user-img" src="./img/avatar_1.jpg" alt="" />
-              <span><strong>Michele</strong></span>
-              <span>Ultimo accesso oggi alle 12:00</span>
-            </div>
-
-            <div class="d-flex align-items-center">
-              <div class="d-flex gap-3">
-                <div><i class="fa-solid fa-magnifying-glass"></i></div>
-                <div><i class="fa-solid fa-paperclip"></i></div>
-                <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                <span class="message">
+                  {{messageUser.message}}
+                  <sub> {{messageUser.date}}</sub></span
+                >
               </div>
             </div>
-          </div>
-          <!-- SEZIONE CHAT -->
-          <div class="chat p-5">
-            <div
-              :class="messageUser.status== 'received' ? 'received' : 'sent'"
-              class="text-message"
-              v-for="(messageUser,index) in contacts[activeIndex].messages"
-            >
-              <span class="message">
-                {{messageUser.message}}
-                <sub> {{messageUser.date}}</sub></span
-              >
-            </div>
-          </div>
-          <!-- SEZIONE INPUT MESSAGGIO -->
+            <!-- SEZIONE INPUT MESSAGGIO -->
 
-          <div
-            class="text-input d-flex justify-content-between align-items-center"
-          >
-            <div>
-              <i class="fa-regular fa-face-smile"></i>
+            <div
+              class="text-input d-flex justify-content-between align-items-center"
+            >
+              <div>
+                <i class="fa-regular fa-face-smile"></i>
+              </div>
+              <div class="input-group w-75">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Scrivi un messaggio"
+                  aria-label="Recipient's username"
+                  aria-describedby="button-addon2"
+                />
+              </div>
+              <div>
+                <i class="fa-solid fa-microphone"></i>
+              </div>
             </div>
-            <div class="input-group w-75">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Scrivi un messaggio"
-                aria-label="Recipient's username"
-                aria-describedby="button-addon2"
-              />
-            </div>
-            <div>
-              <i class="fa-solid fa-microphone"></i>
-            </div>
-          </div>
-        </section>
-      </main>
+          </section>
+        </main>
+      </div>
     </div>
   </body>
 </html>

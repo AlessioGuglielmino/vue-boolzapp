@@ -2,9 +2,17 @@
   height: 100px;
   background-color: #009688;
 }
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#009688 20vh, #dbdbd1 20vh);
+}
 
 main {
-  position: relative;
+  height: 90vh;
+  width: 80%;
 }
 
 .top-left {
@@ -58,6 +66,10 @@ main {
 .contacts-list {
   overflow-y: auto;
   height: 500px;
+  background-color: #ffffff;
+}
+.serch-contacts {
+  background-color: #ffffff;
 }
 
 section {
