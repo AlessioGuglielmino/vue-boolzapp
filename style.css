@@ -1,33 +1,19 @@
 .header {
-  height: 20vh;
+  height: 100px;
   background-color: #009688;
 }
 
-body {
-  background-color: #dadbd2;
-}
 main {
   position: relative;
-}
-.window {
-  background-color: #eaeaea;
-  width: 80%;
-  height: 800px;
-  position: absolute;
-  left: 10%;
-  right: 10%;
+  /* height: 100vh; */
 }
 
 .top-left {
-  width: 30%;
   height: 60px;
-  border: 1px solid black;
 }
 
 .top-right {
-  width: 70%;
   height: 60px;
-  border: 1px solid black;
 }
 .user-img {
   width: 50px;
@@ -35,27 +21,96 @@ main {
   border-radius: 50%;
 }
 
-.top-container {
+.top-side {
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
 }
 
-.side-window {
-  width: 30%;
-  height: 60px;
-  border: 1px solid black;
-  height: 740px;
+.text-contaier {
+  background-color: azure;
+  width: 70%;
 }
-.ringbell {
+.bell {
   background-color: #8edafc;
 }
 
-.right-main-window {
-  width: 70%;
-  height: 740px;
-  border: 1px solid black;
-  background-image: url("./img/mine.jpg");
+.bell-icon {
+  background-color: white;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenitore-left {
+  width: 33%;
+  border-right: 1px solid black;
+  height: 100%;
+}
+.contact-list {
+  overflow: auto;
+}
+
+section {
+  width: 100%;
+  background-image: url("/img/mine.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-info {
+  background-color: #eaeaea;
+  height: 60px;
+}
+
+.chat {
+  min-width: 100%;
+  flex-grow: 1;
+}
+
+.send {
+  text-align: end;
+}
+
+.message {
+  border-radius: 15px;
+  text-align: left;
+  max-width: 600px;
+  min-width: 200px;
+  font-size: 1 rem;
+  line-height: 1rem;
+  padding: 15px;
+}
+
+.text-message {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 15px;
+}
+
+.received > .message {
+  background-color: #d5f9ba;
+}
+.sent > .message {
+  background-color: #ffffff;
+}
+
+.text-message.sent {
+  justify-content: left;
+}
+
+.text-message sub {
+  font-size: 0.6rem;
+  float: right;
+  margin-top: 15px;
+  color: grey;
+}
+
+.text-input {
+  background-color: #eaeaea;
+  padding: 20px;
 }

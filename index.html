@@ -1,203 +1,160 @@
-<body>
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>vue-boolzapp</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue-boolzapp</title>
 
-      <!-- BS -->
-      <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-        crossorigin="anonymous"
-      />
+    <!-- BS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
 
-      <!-- FONT AWESOME -->
-      <link rel="stylesheet"
-      href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css
-      />
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+    href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css
+    />
 
-      <!-- STYLE CSS -->
-      <link rel="stylesheet" href="style.css" />
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="style.css" />
 
-      <!-- VUE FRAMEWORK -->
-      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- VUE FRAMEWORK -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-      <!-- JS -->
-      <script src="main.js" type="text/javascript" defer></script>
-    </head>
+    <!-- JS -->
+    <script src="main.js" type="text/javascript" defer></script>
+  </head>
 
-    <!-- MAIN HTML -->
+  <!-- MAIN HTML -->
 
-    <body>
-      <div id="app">
-        <div class="wrapper"></div>
+  <body>
+    <div id="app">
+      <!-- HEADER -->
+      <header>
+        <div class="header"></div>
+      </header>
+      <!-- MAIN -->
 
-        <!-- HEADER -->
-        <header>
-          <div class="header"></div>
-        </header>
-        <!-- MAIN -->
+      <main class="d-flex">
+        <!-- BARRA SUPERIORE WHAYSAPP -->
 
-        <main>
-          <!-- FINESTRA WHATSAPP -->
+        <!-- BARRA SUPERIORE SINISTRA WHAYSAPP -->
 
-          <div class="window ">
-            <!-- BARRA SUPERIORE WHAYSAPP -->
-
-            <div class="top-window d-flex">
-              <!-- BARRA SUPERIORE SINISTRA WHAYSAPP -->
-
-              <div class="top-left">
-                <div class="top-container">
-                  <div>
-                    <img class="user-img" src="./img/avatar_io.jpg" alt="" />
-                    <span> <strong>Sofia</strong></span>
-                  </div>
-                  <div class="d-flex gap-3">
-                    <div><i class="fa-solid fa-circle-notch"></i></div>
-                    <div><i class="fa-regular fa-message"></i></div>
-                    <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
-                  </div>
-                </div>
+        <!-- CONTENITORE CENTRALE -->
+        <div class="contenitore-left">
+          <div class="top-left p-3 user-info">
+            <div class="top-side">
+              <div>
+                <img class="user-img" src="./img/avatar_io.jpg" alt="" />
+                <span> <strong>Sofia</strong></span>
               </div>
-
-              <!-- BARRA SUPERIORE DESTRA WHAYSAPP -->
-
-              <div class="top-right">
-                <div class="top-container">
-                  <div class="d-flex">
-                    <img class="user-img" src="./img/avatar_1.jpg" alt="" />
-                    <div class="d-flex flex-column">
-                      <span> <strong>Michele</strong></span>
-                      <span class="last-access"
-                        >Ultimo accesso oggi alle 12:00</span
-                      >
-                    </div>
-                  </div>
-                  <div class="d-flex gap-3">
-                    <div><i class="fa-solid fa-magnifying-glass"></i></div>
-                    <div><i class="fa-solid fa-paperclip"></i></div>
-                    <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
-                  </div>
-                </div>
+              <div class="d-flex gap-3">
+                <div><i class="fa-solid fa-circle-notch"></i></div>
+                <div><i class="fa-regular fa-message"></i></div>
+                <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
               </div>
             </div>
-
-
-                <!-- PARTE LATO SINISTRO WHATSAPP -->
-
-          <div class="contenitore d-flex">
-<!-- LEFT SIDE -->
-
-<div class="side-window">
-
-
-  <!-- PARTE LATO SINISTRO WHAYSAPP BELL -->
-
-  <div class="d-flex align-items-center ringbell gap-4">
-    <div>
-      <span>
-        <i class="fa-regular fa-bell-slash fa-xl p-3"></i
-      ></span>
-    </div>
-    <div class="d-flex flex-column flex-start">
-      <div>
-        <span>
-          <strong>Ricevi notifiche di nuovi messaggi</strong></span
-        >
-      </div>
-      <div>
-        <p>
-          <a
-            href="#"
-            class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-            >Attiva le notifiche desktop</a
-          >
-        </p>
-      </div>
-    </div>
-  </div>
-  <!-- PARTE LATO SINISTRO WHAYSAPP INPUT RICERCA -->
-
-  <div class="input-group my-2">
-    <button
-      class="btn btn-outline-secondary"
-      type="button"
-      id="button-addon1"
-    >
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-    <input
-      type="text"
-      class="form-control"
-      placeholder="cerca o inizia una nuova chat"
-      aria-label="Example text with button addon"
-      aria-describedby="button-addon1"
-    />
-  </div>
-  <!-- PARTE LATO SINISTRO WHAYSAPP  LISTA UTENTI -->
-
-  <div class="d-flex justify-content-between p-2">
-    <!-- 1 UTENTE -->
-
-    <img class="user-img" src="./img/avatar_1.jpg" alt="" />
-    <div class="d-flex flex-column align-items-center">
-      <div class="d-flex flex-column">
-        <span> <strong>Michele</strong></span>
-        <span class=" ">Ultimo messaggio inviato</span>
-      </div>
-    </div>
-    <div>
-      <span>12:00</span>
-    </div>
-  </div>
-  <hr>
-
-                  <!-- 2 UTENTE -->
-
-  <div class="d-flex justify-content-between p-2">
-    <img class="user-img" src="./img/avatar_2.jpg" alt="" />
-    <div class="d-flex flex-column align-items-center">
-      <div class="d-flex flex-column">
-        <span> <strong>Fabio</strong></span>
-        <span class=" ">Ultimo messaggio inviato</span>
-      </div>
-    </div>
-    <div>
-      <span>12:00</span>
-    </div>
-
-
-
-</div>
-<hr>
-
-
-
-
-</div>
-
-<!-- RIGHT MAIN SIDE -->
-<div class="right-main-window">
-
-  <div></div>
-
-</div>
           </div>
-   
 
-        
-           
-       
+          <!-- CAMPANA NOTIFICA MESSAGGI  -->
 
-           
+          <div class="bell d-flex align-items-center gap-3 px-3">
+            <div class="bell-icon">
+              <i class="fa-solid fa-bell-slash fa-xl"></i>
+            </div>
+            <div class="">
+              <p>Ricevi notifiche di nuovi messaggi</p>
+              <a href="#">Attiva notifiche desktop </a>
+            </div>
+          </div>
+          <div>
+            <!-- BARRA DI RICERCA CONTATI -->
+            <div class="input-group px-2 my-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Cerca o inizia una nuova chat"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="button-addon2"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
 
+          <!-- LISTA UTENTI -->
+          <div class="contacts-list px-2">
+            <div v-for="(contact,index) in contacts" class="d-flex py-3">
+              <img class="user-img" :src="contact.avatar" alt="" />
+              <div class="d-flex flex-column justify-content-between">
+                <span> <strong>{{contact.name}}</strong></span>
+                <span class="last-access">Ultimo messaggio inviato</span>
+              </div>
+              <span class="ms-auto">12:00</span>
+            </div>
+          </div>
+        </div>
 
-        </main>
-      </div>
-    </body>
-  </html>
-</body>
+        <!-- BARRA SUPERIORE DESTRA WHAYSAPP -->
+        <section>
+          <div class="d-flex justify-content-between user-info px-3">
+            <div>
+              <img class="user-img" src="./img/avatar_1.jpg" alt="" />
+              <span><strong>Michele</strong></span>
+              <span>Ultimo accesso oggi alle 12:00</span>
+            </div>
+
+            <div class="d-flex align-items-center">
+              <div class="d-flex gap-3">
+                <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div><i class="fa-solid fa-paperclip"></i></div>
+                <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+              </div>
+            </div>
+          </div>
+          <!-- SEZIONE CHAT -->
+          <div class="chat p-5">
+            <div class="text-message received">
+              <span class="message"> ciao <sub>12:00</sub></span>
+            </div>
+            <div class="text-message sent">
+              <div class="message">
+                ciao
+                <sub>12:00</sub>
+              </div>
+            </div>
+          </div>
+          <!-- SEZIONE INPUT MESSAGGIO -->
+
+          <div
+            class="text-input d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <i class="fa-regular fa-face-smile"></i>
+            </div>
+            <div class="input-group w-75">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Scrivi un messaggio"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
+            </div>
+            <div>
+              <i class="fa-solid fa-microphone"></i>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
