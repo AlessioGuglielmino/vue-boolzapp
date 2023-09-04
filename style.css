@@ -5,7 +5,6 @@
 
 main {
   position: relative;
-  /* height: 100vh; */
 }
 
 .top-left {
@@ -38,6 +37,7 @@ main {
 
 .bell-icon {
   background-color: white;
+  color: #8edafc;
   border-radius: 50%;
   aspect-ratio: 1;
   width: 50px;
@@ -49,9 +49,15 @@ main {
   width: 33%;
   border-right: 1px solid black;
   height: 100%;
+  overflow: hidden;
 }
-.contact-list {
-  overflow: auto;
+.contact:hover {
+  cursor: pointer;
+  background-color: rgba(203, 197, 197, 0.897);
+}
+.contacts-list {
+  overflow-y: auto;
+  height: 500px;
 }
 
 section {

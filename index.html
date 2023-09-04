@@ -33,14 +33,12 @@
   <body>
     <div id="app">
       <!-- HEADER -->
-      <header>
-        <div class="header"></div>
-      </header>
+
       <!-- MAIN -->
 
       <main class="d-flex">
         <!-- BARRA SUPERIORE WHAYSAPP -->
-
+        <div class="header"></div>
         <!-- BARRA SUPERIORE SINISTRA WHAYSAPP -->
 
         <!-- CONTENITORE CENTRALE -->
@@ -92,7 +90,11 @@
 
           <!-- LISTA UTENTI -->
           <div class="contacts-list px-2">
-            <div v-for="(contact,index) in contacts" class="d-flex py-3">
+            <div
+              @click="chatText(index)"
+              v-for="(contact,index) in contacts"
+              class="d-flex py-3 border-bottom contact"
+            >
               <img class="user-img" :src="contact.avatar" alt="" />
               <div class="d-flex flex-column justify-content-between">
                 <span> <strong>{{contact.name}}</strong></span>
@@ -122,14 +124,15 @@
           </div>
           <!-- SEZIONE CHAT -->
           <div class="chat p-5">
-            <div class="text-message received">
-              <span class="message"> ciao <sub>12:00</sub></span>
-            </div>
-            <div class="text-message sent">
-              <div class="message">
-                ciao
-                <sub>12:00</sub>
-              </div>
+            <div
+              :class="messageUser.status== 'received' ? 'received' : 'sent'"
+              class="text-message"
+              v-for="(messageUser,index) in contacts[activeIndex].messages"
+            >
+              <span class="message">
+                {{messageUser.message}}
+                <sub> {{messageUser.date}}</sub></span
+              >
             </div>
           </div>
           <!-- SEZIONE INPUT MESSAGGIO -->

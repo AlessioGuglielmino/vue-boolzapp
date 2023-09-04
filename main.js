@@ -170,4 +170,11 @@ createApp({
       ],
     };
   },
+  methods: {
+    chatText(index) {
+      console.log("click");
+
+      this.activeIndex = index;
+    },
+  },
 }).mount("#app");
