@@ -4,6 +4,7 @@ createApp({
     return {
       inputMessage: "",
       activeIndex: 0,
+      serchContact: "",
 
       contacts: [
         {
@@ -191,6 +192,17 @@ createApp({
         };
         this.contacts[this.activeIndex].messages.push(answer);
       }, 1000);
+    },
+    serchContacts() {
+      for (const serch of this.contacts) {
+        nome = serch.name.toLowerCase().trim();
+        serchName = this.serchContact.trim().toLowerCase();
+        if (!nome.includes(serchName)) {
+          serch.visible = false;
+        } else {
+          serch.visible = true;
+        }
+      }
     },
   },
 }).mount("#app");

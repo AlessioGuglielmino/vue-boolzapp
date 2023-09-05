@@ -72,6 +72,8 @@
               <!-- BARRA DI RICERCA CONTATTI -->
               <div class="input-group p-3 serch-contacts">
                 <input
+                  v-model="serchContact"
+                  @keyup="serchContacts()"
                   type="text"
                   class="form-control"
                   placeholder="Cerca o inizia una nuova chat"
@@ -94,6 +96,7 @@
                 @click="chatText(index)"
                 v-for="(contact,index) in contacts"
                 class="d-flex py-3 border-bottom contact"
+                :class=" contact.visible == true ? '' : 'd-none' "
               >
                 <img class="user-img" :src="contact.avatar" alt="" />
                 <div class="d-flex flex-column justify-content-between">
@@ -109,8 +112,13 @@
           <section>
             <div class="d-flex justify-content-between user-info px-3">
               <div>
-                <img class="user-img" src="./img/avatar_1.jpg" alt="" />
-                <span><strong>Michele</strong></span>
+                <img
+                  class="user-img me-3"
+                  :src="contacts[activeIndex].avatar"
+                />
+                <span class="me-3"
+                  ><strong>{{contacts[activeIndex].name}}</strong></span
+                >
                 <span>Ultimo accesso oggi alle 12:00</span>
               </div>
 
